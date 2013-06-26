@@ -1,53 +1,45 @@
 package org.webteam.entity;
 
-/**
- * User entity. @author MyEclipse Persistence Tools
- */
+import java.io.Serializable;
 
-public class User implements java.io.Serializable {
+import org.dom4j.DocumentHelper;
+import org.dom4j.Element;
 
-	// Fields
+public class User implements Serializable {
+	
+	private Integer userid;//
+	private String username;//
+	private String userpass;//
+	
+	public Integer getUserid() {
+		return this.userid;
+	}
+	public void setUserid(Integer userid) {
+		this.userid = userid;
+	}
+	public java.lang.String getUsername() {
+		return this.username;
+	}
+	public void setUsername(java.lang.String username) {
+		this.username = username;
+	}
+	public java.lang.String getUserpass() {
+		return this.userpass;
+	}
+	public void setUserpass(java.lang.String userpass) {
+		this.userpass = userpass;
+	}
 
-	private Integer userId;
-	private String userName;
-	private String userPass;
-
-	// Constructors
-
-	/** default constructor */
 	public User() {
 	}
 
-	/** full constructor */
-	public User(String userName, String userPass) {
-		this.userName = userName;
-		this.userPass = userPass;
+	public User(Integer userid) {
+		this.userid = userid;
 	}
 
-	// Property accessors
-
-	public Integer getUserId() {
-		return this.userId;
+	public User(Integer userid, java.lang.String username, java.lang.String userpass) {
+		this.userid = userid;
+		this.username = username;
+		this.userpass = userpass;
 	}
-
-	public void setUserId(Integer userId) {
-		this.userId = userId;
-	}
-
-	public String getUserName() {
-		return this.userName;
-	}
-
-	public void setUserName(String userName) {
-		this.userName = userName;
-	}
-
-	public String getUserPass() {
-		return this.userPass;
-	}
-
-	public void setUserPass(String userPass) {
-		this.userPass = userPass;
-	}
-
 }

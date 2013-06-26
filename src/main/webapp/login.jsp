@@ -1,32 +1,10 @@
 <%@ page contentType="text/html;charset=UTF-8"%>
-<%
-	String path = request.getContextPath();
-	String basePath = request.getScheme() + "://"
-			+ request.getServerName() + ":" + request.getServerPort()
-			+ path + "/";
-	String username = (String)session.getAttribute("username");
-%>
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
-	<head>
-		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-		<title>OnlineIDE--login</title>
-		<link href="./css/inettuts.css" rel="stylesheet" type="text/css" />
-		<link href="./css/src.css" rel="stylesheet" type="text/css" />
-		<link href="./css/vscontext.css" rel="stylesheet" type="text/css" />
-		<link rel="stylesheet" href="css/slide.css" type="text/css" media="screen" />
-
-		<script type="text/javascript" src="./js/jquery-1.6.js"></script>
-		<script src="js/slide.js" type="text/javascript"></script>
-	</head>
-	<body>
+<%@include file="common.jsp" %>
 		<div id="head">
 			<h1> 
 				OnlineIDE 
 			</h1>
 		</div>
-
-	
     	
     	<!-- 弹出框开始 -->
     	<!-- 登陆框 -->
@@ -34,12 +12,12 @@
 			<div id="panel">
 				<div class="content clearfix">
 					<div class="left">
-						<form class="clearfix" action="${path }login/login.action" method="post">
+						<form class="clearfix" action="${path }user/login.do" method="post">
 							<h1 class="padlock">用户登录</h1>
 							<label class="grey" for="log">用户名:</label>
 							<input class="field" type="text" name="username" id="log" value="" size="16" /><br />
 							<label class="grey" for="pwd">密　码:</label>
-							<input class="field" type="password" name="password" id="pwd" size="16" />
+							<input class="field" type="password" name="userpass" id="pwd" size="16" />
 		        			<div class="clear"></div>
 							<input type="submit" name="submit" value="登 录" class="bt_login" />
 							<input type="reset" name="cancel" value="取 消" class="bt_cancel" />
@@ -47,7 +25,6 @@
 					</div>
 				</div>
 			</div> 
-		
 		    <!-- The tab on top -->	
 			<div class="tab">
 				<ul class="login">
@@ -64,9 +41,5 @@
 			
 		</div> <!-- /toppanel --><!-- 登陆框结束 -->
 		
-		
 		<!-- 弹出框结束  -->
-		
-	
-	</body>
-</html>
+<%@ include file="footer.jsp" %>

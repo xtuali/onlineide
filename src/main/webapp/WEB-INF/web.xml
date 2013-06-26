@@ -41,13 +41,13 @@
 		<servlet-class>org.springframework.web.servlet.DispatcherServlet</servlet-class>
 		<init-param>
 			<param-name>contextConfigLocation</param-name>
-			<param-value>classpath*:/spring_*_mvc.xml</param-value>
+			<param-value>classpath*:/spring_*.xml</param-value>
 		</init-param>
 		<load-on-startup>1</load-on-startup>
 	</servlet>
 	<servlet-mapping>
 		<servlet-name>springmvc</servlet-name>
-		<url-pattern>/</url-pattern><!-- 过滤所有路径(spring 3.0 REST 风格支持) -->
+		<url-pattern>*.do</url-pattern><!-- 过滤所有路径(spring 3.0 REST 风格支持) -->
 	</servlet-mapping>
 	
 	

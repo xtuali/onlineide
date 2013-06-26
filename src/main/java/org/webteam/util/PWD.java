@@ -13,6 +13,13 @@ import javax.crypto.spec.SecretKeySpec;
 
 import org.apache.log4j.Logger;
 
+/**
+ * 密码加密类
+ * @author    tpf
+ * @version   1.0  2012-8-26
+ * @see       [相关类/方法]
+ * @since     [产品/模块版本]
+ */
 public class PWD {
 	protected final static Logger log = Logger.getLogger(PWD.class);
 
@@ -721,4 +728,3 @@ class Base64Self {
 		return newSize;
 	}
 }
-
