@@ -1,9 +1,24 @@
 <?xml version="1.0" encoding="UTF-8"?><project-modules id="moduleCoreId" project-version="1.5.0">
-    <wb-module deploy-name="onlineide">
+    <wb-module deploy-name="onlineide-web">
         <wb-resource deploy-path="/WEB-INF/classes" source-path="/src/main/java"/>
         <wb-resource deploy-path="/WEB-INF/classes" source-path="/src/main/resources"/>
-        <wb-resource deploy-path="/" source-path="/src/main/webapp"/>
-        <property name="context-root" value="onlineide"/>
-        <property name="java-output-path" value="/onlineide/target/classes"/>
+        <wb-resource deploy-path="/" source-path="/src/main/webapp" tag="defaultRootSource"/>
+        <dependent-module archiveName="onlineide-util.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/onlineide-util/onlineide-util">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="onlineide-fs.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/onlineide-fs/onlineide-fs">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="onlineide-core.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/onlineide-core/onlineide-core">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="onlineide-mq.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/onlineide-mq/onlineide-mq">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="onlineide-biz.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/onlineide-biz/onlineide-biz">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <property name="java-output-path" value="/onlineide-web/target/classes"/>
+        <property name="context-root" value="onlineide-web"/>
     </wb-module>
 </project-modules>

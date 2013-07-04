@@ -1,0 +1,9 @@
+Run.java中需要增加推送信息，将产生的消息推送到消息队列，用户就从消息队列来获取信息
+
+		//推送消息
+/*		if (ResultControler.getControler().get("username") == null) {
+			results = new RunResults(username);
+			ResultControler.getControler().put(username, results);
+		} else {
+			results = ResultControler.getControler().get("username");
+		}*/

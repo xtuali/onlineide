@@ -1,13 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <projectDescription>
-	<name>onlineide-web</name>
+	<name>onlineide-mq</name>
 	<comment></comment>
 	<projects>
-		<project>onlineide-util</project>
-		<project>onlineide-fs</project>
-		<project>onlineide-core</project>
-		<project>onlineide-mq</project>
-		<project>onlineide-biz</project>
 	</projects>
 	<buildSpec>
 		<buildCommand>
@@ -21,12 +16,12 @@
 			</arguments>
 		</buildCommand>
 		<buildCommand>
-			<name>org.eclipse.wst.validation.validationbuilder</name>
+			<name>org.eclipse.m2e.core.maven2Builder</name>
 			<arguments>
 			</arguments>
 		</buildCommand>
 		<buildCommand>
-			<name>org.eclipse.m2e.core.maven2Builder</name>
+			<name>org.eclipse.wst.validation.validationbuilder</name>
 			<arguments>
 			</arguments>
 		</buildCommand>
